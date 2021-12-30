@@ -23,8 +23,16 @@ function Weather() {
       <input
         placeholder="search..."
         onChange={(e) => setUserinput(e.target.value)}
+        value={userinput}
       />
-      <button onClick={() => setCity(userinput)}>Seach</button>
+      <button
+        onClick={() => {
+          setCity(userinput);
+          setUserinput("");
+        }}
+      >
+        Seach
+      </button>
       {currentWeather !== null && <DetailCard cityInfo={currentWeather} />}
     </div>
   );

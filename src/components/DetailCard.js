@@ -1,7 +1,6 @@
 import React from "react";
 
 function DetailCard({ cityInfo }) {
-  console.log(cityInfo);
   return (
     <>
       <h2>{cityInfo.name}</h2>
