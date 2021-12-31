@@ -1,0 +1,12 @@
+.container {
+  border-style: dashed;
+}
+li {
+  list-style-type: none;
+  border-style: solid;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
