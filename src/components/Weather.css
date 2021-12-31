@@ -12,11 +12,17 @@ input {
 input:focus {
   outline: none;
 }
+
 ::placeholder {
   color: white;
   opacity: 1; /* Firefox */
 }
-
+.myGridDisplay {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  box-sizing: border-box;
+  justify-content: center;
+}
 button {
   width: 100px;
   height: 30px;

@@ -1,8 +1,6 @@
 import React from "react";
 import "./DetailCard.css";
 function DetailCard({ cityInfo }) {
-  console.log(cityInfo);
-
   const celsius = parseFloat(cityInfo.main.temp - 273.15).toFixed(2);
 
   return (

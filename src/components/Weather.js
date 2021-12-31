@@ -6,7 +6,8 @@ import "./Weather.css";
 function Weather() {
   const [userinput, setUserinput] = useState("");
   const [city, setCity] = useState("");
-  const [currentWeather, setcurrentWeather] = useState("");
+
+  const [list, setList] = useState([]);
 
   useEffect(() => {
     axios
@@ -14,7 +15,8 @@ function Weather() {
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d018148642d233fed0759f06ec72279a`
       )
       .then((response) => {
-        setcurrentWeather(response.data);
+        const data = response.data;
+        setList((olddata) => [...olddata, data]);
       })
       .catch((error) => console.log(error));
   }, [city]);
@@ -34,8 +36,14 @@ function Weather() {
       >
         Seach
       </button>
-
-      {currentWeather !== "" && <DetailCard cityInfo={currentWeather} />}
+      {list.length > 0 && (
+        <div className="myGridDisplay">
+          {list.map((item) => {
+            console.log(item);
+            return <DetailCard cityInfo={item} />;
+          })}
+        </div>
+      )}
     </div>
   );
 }
