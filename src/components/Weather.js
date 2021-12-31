@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import DetailCard from "./DetailCard";
+import "./Weather.css";
 
 function Weather() {
   const [userinput, setUserinput] = useState("");
@@ -33,6 +34,7 @@ function Weather() {
       >
         Seach
       </button>
+
       {currentWeather !== "" && <DetailCard cityInfo={currentWeather} />}
     </div>
   );

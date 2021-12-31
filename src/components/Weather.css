@@ -1,0 +1,26 @@
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  color: white;
+  box-sizing: border-box;
+  font-size: 18px;
+  height: 50px;
+  width: 200px;
+}
+input:focus {
+  outline: none;
+}
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-color: rgb(255, 30, 66);
+  color: white;
+}
